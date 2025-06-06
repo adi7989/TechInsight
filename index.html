@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container">
+        <div class="reading-progress"></div>
+    </div>
+
     <!-- Top Bar -->
     <div class="top-bar py-2 bg-primary text-white">
         <div class="container d-flex justify-content-between align-items-center">
@@ -172,13 +177,15 @@
             </div>
             
             <!-- Category Filter Buttons -->
-            <div class="category-pills text-center mb-5" data-aos="fade-up" data-aos-duration="800">
-                <button class="btn btn-outline-primary rounded-pill me-2 mb-2 active">All Posts</button>
-                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">Web Development</button>
-                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">UI/UX Design</button>
-                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">JavaScript</button>
-                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">AI & Machine Learning</button>
-                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">Mobile Apps</button>
+            <div class="category-pills text-center mb-4" data-aos="fade-up" data-aos-duration="800">
+                <div class="d-inline-flex flex-wrap justify-content-center">
+                    <button class="btn btn-sm btn-link text-decoration-none me-3 mb-2 active" data-category="all">All Posts</button>
+                    <button class="btn btn-sm btn-link text-decoration-none me-3 mb-2" data-category="web-development">Web Development</button>
+                    <button class="btn btn-sm btn-link text-decoration-none me-3 mb-2" data-category="ui-ux-design">UI/UX Design</button>
+                    <button class="btn btn-sm btn-link text-decoration-none me-3 mb-2" data-category="javascript">JavaScript</button>
+                    <button class="btn btn-sm btn-link text-decoration-none me-3 mb-2" data-category="ai-ml">AI & Machine Learning</button>
+                    <button class="btn btn-sm btn-link text-decoration-none me-3 mb-2" data-category="mobile-apps">Mobile Apps</button>
+                </div>
             </div>
             
             <div class="row g-4 blog-posts-container">
@@ -203,7 +210,8 @@
                             <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">845</span></span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn me-1" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-circle bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post"><i class="far fa-bookmark"></i></button>
                             </div>
                         </div>
                     </div>
@@ -230,7 +238,8 @@
                             <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">1.1K</span></span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn me-1" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-circle bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post"><i class="far fa-bookmark"></i></button>
                             </div>
                         </div>
                     </div>
@@ -257,7 +266,8 @@
                             <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">732</span></span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn me-1" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-circle bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post"><i class="far fa-bookmark"></i></button>
                             </div>
                         </div>
                     </div>
@@ -284,7 +294,8 @@
                             <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">956</span></span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn me-1" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-circle bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post"><i class="far fa-bookmark"></i></button>
                             </div>
                         </div>
                     </div>
@@ -311,7 +322,8 @@
                             <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">678</span></span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn me-1" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-circle bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post"><i class="far fa-bookmark"></i></button>
                             </div>
                         </div>
                     </div>
@@ -338,7 +350,8 @@
                             <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">542</span></span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn me-1" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-circle bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post"><i class="far fa-bookmark"></i></button>
                             </div>
                         </div>
                     </div>

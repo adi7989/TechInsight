@@ -240,14 +240,45 @@ a {
 }
 
 .category-tag {
-    background-color: var(--primary-color);
+    background-color: rgba(67, 97, 238, 0.85);
     color: white;
-    padding: 5px 15px;
+    padding: 4px 12px;
     border-radius: 50px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     display: inline-block;
     margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+/* Category Pills */
+.category-pills .btn {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    padding: 0.25rem 0.5rem;
+}
+
+.category-pills .btn:hover {
+    color: var(--primary-color);
+}
+
+.category-pills .btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.category-pills .btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color);
 }
 
 .card-title {
@@ -725,6 +756,19 @@ a {
 
 .dark-mode .badge.bg-light:hover {
     background-color: var(--primary-color) !important;
+}
+
+.dark-mode .category-pills .btn {
+    color: var(--text-color);
+}
+
+.dark-mode .category-pills .btn:hover,
+.dark-mode .category-pills .btn.active {
+    color: var(--primary-color);
+}
+
+.dark-mode .category-tag {
+    background-color: rgba(109, 131, 242, 0.85);
 }
 
 .dark-mode .list-group-item {
