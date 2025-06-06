@@ -1,0 +1,79 @@
+/* Custom styles for the blog */
+
+/* Add some custom font styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style the navbar brand */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Add hover effect to cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style card titles */
+.card-title {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Style the read more button */
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+}
+
+/* Style the footer social icons */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Add some spacing to the header */
+header {
+    margin-bottom: 1rem;
+}
+
+/* Style the newsletter section */
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+/* Make images responsive */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer quick links hover effect */
+footer ul li a {
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
