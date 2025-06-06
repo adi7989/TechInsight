@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of AI in Web Development - TechInsight Blog</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container">
+        <div class="reading-progress"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar py-2 bg-primary text-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span><i class="fas fa-envelope me-2"></i>contact@techinsight.com</span>
+                <span class="ms-3"><i class="fas fa-phone me-2"></i>(123) 456-7890</span>
+            </div>
+            <div class="social-links">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary">Tech</span>Insight
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile Apps</a></li>
+                            <li><a class="dropdown-item" href="#">UI/UX Design</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">AI & Machine Learning</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary rounded-pill px-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                            <i class="fas fa-user-plus me-2"></i>Subscribe
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-lg-3">
+                    <button class="btn btn-outline-dark border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvas">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <!-- Dark Mode Toggle -->
+                    <div class="form-check form-switch ms-2 mt-2">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label" for="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Article Header -->
+                    <article class="blog-post" data-aos="fade-up" data-aos-duration="1000">
+                        <header class="blog-post-header mb-4">
+                            <div class="category-badge mb-3">AI & Machine Learning</div>
+                            <h1 class="blog-post-title display-4 fw-bold mb-3">The Future of AI in Web Development</h1>
+                            
+                            <div class="blog-post-meta d-flex flex-wrap align-items-center mb-4">
+                                <div class="author-info d-flex align-items-center me-4">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="rounded-circle me-2" width="40" height="40">
+                                    <div>
+                                        <span class="d-block fw-bold">Sarah Johnson</span>
+                                        <small class="text-muted">Senior Web Developer</small>
+                                    </div>
+                                </div>
+                                <div class="post-details d-flex flex-wrap">
+                                    <span class="me-3"><i class="far fa-calendar-alt me-1"></i> June 20, 2023</span>
+                                    <span class="me-3"><i class="far fa-clock me-1"></i> 8 min read</span>
+                                    <span class="me-3"><i class="far fa-eye me-1"></i> 1.2K Views</span>
+                                    <span><i class="far fa-comments me-1"></i> <span class="comment-count">24</span> Comments</span>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-post-image mb-4">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Featured Image" class="img-fluid rounded-4 shadow">
+                            </div>
+                            
+                            <div class="blog-post-share d-flex justify-content-between align-items-center mb-4">
+                                <div class="share-buttons">
+                                    <span class="me-2">Share:</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-1" data-bs-toggle="tooltip" title="Share on Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline-info rounded-circle me-1" data-bs-toggle="tooltip" title="Share on Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-circle me-1" data-bs-toggle="tooltip" title="Share on WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle me-1" data-bs-toggle="tooltip" title="Share on LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                                <div class="post-actions">
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill me-1 like-btn" data-bs-toggle="tooltip" title="Like this post">
+                                        <i class="far fa-heart me-1"></i> <span class="like-count">87</span>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill bookmark-btn" data-bs-toggle="tooltip" title="Bookmark this post">
+                                        <i class="far fa-bookmark me-1"></i> Save
+                                    </button>
+                                </div>
+                            </div>
+                        </header>
+                        
+                        <!-- Article Content -->
+                        <div class="blog-post-content">
+                            <p class="lead">Artificial Intelligence is revolutionizing how we build and interact with websites. Discover how AI tools are changing the landscape for developers and designers alike.</p>
+                            
+                            <p>The integration of Artificial Intelligence (AI) into web development is no longer a futuristic concept but a present reality that's reshaping how websites are built, maintained, and experienced. From automated coding assistants to intelligent user interfaces, AI is transforming every aspect of web development.</p>
+                            
+                            <h2 class="mt-5 mb-4">AI-Powered Development Tools</h2>
+                            
+                            <p>Modern web development is increasingly supported by AI-powered tools that can generate code, detect bugs, and even design layouts. These tools are not replacing developers but rather enhancing their capabilities and productivity.</p>
+                            
+                            <div class="code-block bg-light p-4 rounded-3 my-4">
+                                <pre><code>// Example of AI-generated React component
+import React, { useState, useEffect } from 'react';
+
+const AIRecommendationEngine = ({ userData }) => {
+  const [recommendations, setRecommendations] = useState([]);
+  
+  useEffect(() => {
+    // AI algorithm processes user data to generate recommendations
+    const aiGeneratedRecommendations = processUserData(userData);
+    setRecommendations(aiGeneratedRecommendations);
+  }, [userData]);
+  
+  return (
+    &lt;div className="recommendation-container"&gt;
+      {recommendations.map((item, index) => (
+        &lt;RecommendationCard key={index} item={item} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+                            </div>
+                            
+                            <p>AI coding assistants like GitHub Copilot can suggest entire functions and blocks of code based on comments or the context of what you're building. This significantly speeds up development time and helps developers focus on solving unique problems rather than writing boilerplate code.</p>
+                            
+                            <h2 class="mt-5 mb-4">Personalized User Experiences</h2>
+                            
+                            <p>One of the most significant impacts of AI on web development is the ability to create highly personalized user experiences. AI algorithms can analyze user behavior, preferences, and patterns to deliver customized content, recommendations, and interfaces.</p>
+                            
+                            <div class="row my-4">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">AI-Driven Personalization</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check-circle text-success me-2"></i> Content recommendations</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i> Dynamic pricing</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i> Personalized email marketing</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i> Custom user interfaces</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i> Behavioral predictions</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Benefits for Businesses</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-chart-line text-primary me-2"></i> Increased engagement</li>
+                                                <li><i class="fas fa-shopping-cart text-primary me-2"></i> Higher conversion rates</li>
+                                                <li><i class="fas fa-redo text-primary me-2"></i> Improved retention</li>
+                                                <li><i class="fas fa-star text-primary me-2"></i> Enhanced user satisfaction</li>
+                                                <li><i class="fas fa-bullseye text-primary me-2"></i> More effective targeting</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p>E-commerce websites like Amazon and entertainment platforms like Netflix have been leveraging AI for years to provide personalized recommendations. Now, these capabilities are becoming accessible to developers of all types of websites and applications.</p>
+                            
+                            <blockquote class="blockquote bg-light p-4 rounded-3 my-5">
+                                <p class="mb-0">"AI is not just changing what we can do with websites, but fundamentally altering how we think about the relationship between users and digital experiences."</p>
+                                <footer class="blockquote-footer mt-2">Dr. Emily Chen, <cite title="Source Title">AI Research Institute</cite></footer>
+                            </blockquote>
+                            
+                            <h2 class="mt-5 mb-4">Chatbots and Conversational Interfaces</h2>
+                            
+                            <p>AI-powered chatbots and conversational interfaces have evolved from simple rule-based systems to sophisticated assistants capable of understanding natural language and providing helpful responses. These tools are becoming essential components of modern websites, offering immediate support and guidance to users.</p>
+                            
+                            <p>Advanced chatbots can:</p>
+                            <ul>
+                                <li>Answer frequently asked questions</li>
+                                <li>Guide users through complex processes</li>
+                                <li>Collect information and feedback</li>
+                                <li>Process simple transactions</li>
+                                <li>Escalate to human support when necessary</li>
+                            </ul>
+                            
+                            <div class="alert alert-info my-4" role="alert">
+                                <h5 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Did You Know?</h5>
+                                <p class="mb-0">According to recent studies, websites with AI-powered chatbots see an average increase of 35% in customer engagement and a 15% increase in conversion rates.</p>
+                            </div>
+                            
+                            <h2 class="mt-5 mb-4">Accessibility Improvements</h2>
+                            
+                            <p>AI is also making significant contributions to web accessibility. Tools powered by machine learning can automatically analyze websites for accessibility issues, suggest improvements, and even dynamically adjust content to meet the needs of users with disabilities.</p>
+                            
+                            <p>For example, AI can:</p>
+                            <ul>
+                                <li>Generate alternative text for images</li>
+                                <li>Create captions for videos</li>
+                                <li>Adjust contrast and text size based on user needs</li>
+                                <li>Simplify navigation for users with cognitive disabilities</li>
+                            </ul>
+                            
+                            <h2 class="mt-5 mb-4">The Future Outlook</h2>
+                            
+                            <p>As AI continues to evolve, we can expect even more profound changes in web development. Some emerging trends include:</p>
+                            
+                            <div class="row my-4">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body">
+                                            <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                                            <h5 class="card-title">AI-Generated Websites</h5>
+                                            <p class="card-text">Complete websites generated from simple text prompts or requirements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body">
+                                            <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                                            <h5 class="card-title">Predictive UX</h5>
+                                            <p class="card-text">Interfaces that anticipate user needs before they're expressed.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body">
+                                            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                                            <h5 class="card-title">Advanced Security</h5>
+                                            <p class="card-text">AI systems that detect and respond to security threats in real-time.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p>While these advancements bring exciting possibilities, they also raise important questions about privacy, data security, and the role of human creativity in web development. As we embrace AI tools, it's crucial to maintain a balance that leverages technology while preserving the human touch that makes great websites truly resonate with users.</p>
+                            
+                            <h2 class="mt-5 mb-4">Conclusion</h2>
+                            
+                            <p>The integration of AI into web development represents one of the most significant technological shifts in the field. By embracing these tools and approaches, developers can create more intelligent, responsive, and user-friendly websites while focusing their human creativity on solving complex problems and creating meaningful experiences.</p>
+                            
+                            <p>As we look to the future, the collaboration between human developers and AI tools will likely define the next era of web development, creating possibilities we're only beginning to imagine.</p>
+                            
+                            <!-- Tags -->
+                            <div class="blog-post-tags mt-5">
+                                <h5 class="mb-3">Tags:</h5>
+                                <div class="tags">
+                                    <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Artificial Intelligence</a>
+                                    <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Web Development</a>
+                                    <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Machine Learning</a>
+                                    <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">UX Design</a>
+                                    <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Future Tech</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Author Bio -->
+                    <div class="author-bio bg-light p-4 rounded-4 my-5" data-aos="fade-up" data-aos-duration="800">
+                        <div class="row">
+                            <div class="col-md-2 mb-3 mb-md-0 text-center">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="rounded-circle img-fluid" style="max-width: 100px;">
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="mb-1">About the Author</h5>
+                                <h4 class="mb-3">Sarah Johnson</h4>
+                                <p>Sarah is a Senior Web Developer with over 8 years of experience in frontend development and UI/UX design. She specializes in creating responsive, accessible, and user-friendly web applications. Sarah regularly writes about emerging technologies and their impact on web development.</p>
+                                <div class="author-social mt-3">
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comments Section -->
+                    <section class="comments-section my-5" data-aos="fade-up" data-aos-duration="800">
+                        <h3 class="mb-4">Comments (<span class="comment-count">24</span>)</h3>
+                        
+                        <div class="comments-list">
+                            <!-- Comment 1 -->
+                            <div class="comment mb-4">
+                                <div class="d-flex">
+                                    <div class="comment-avatar">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Commenter" class="rounded-circle" width="50" height="50">
+                                    </div>
+                                    <div class="ms-3 flex-grow-1">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <h6 class="mb-0">David Chen</h6>
+                                            <small class="text-muted ms-2">June 21, 2023</small>
+                                        </div>
+                                        <p class="mb-0">Great article! I've been using AI tools in my development workflow and they've definitely improved my productivity. I'm curious about how these tools will evolve in the next few years.</p>
+                                        <div class="comment-actions mt-2">
+                                            <button class="btn btn-sm text-primary p-0 me-3">
+                                                <i class="far fa-thumbs-up me-1"></i> Like
+                                            </button>
+                                            <button class="btn btn-sm text-primary p-0">
+                                                <i class="far fa-reply me-1"></i> Reply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nested Reply -->
+                                <div class="comment-reply ms-5 mt-3">
+                                    <div class="d-flex">
+                                        <div class="comment-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="rounded-circle" width="40" height="40">
+                                        </div>
+                                        <div class="ms-3 flex-grow-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <h6 class="mb-0">Sarah Johnson</h6>
+                                                <small class="text-muted ms-2">June 21, 2023</small>
+                                                <span class="badge bg-primary ms-2">Author</span>
+                                            </div>
+                                            <p class="mb-0">Thanks, David! I agree - the pace of development in AI tools is incredible. I'm particularly excited about the potential for more sophisticated code generation and automated testing.</p>
+                                            <div class="comment-actions mt-2">
+                                                <button class="btn btn-sm text-primary p-0 me-3">
+                                                    <i class="far fa-thumbs-up me-1"></i> Like
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 2 -->
+                            <div class="comment mb-4">
+                                <div class="d-flex">
+                                    <div class="comment-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Commenter" class="rounded-circle" width="50" height="50">
+                                    </div>
+                                    <div class="ms-3 flex-grow-1">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <h6 class="mb-0">Emily Rodriguez</h6>
+                                            <small class="text-muted ms-2">June 20, 2023</small>
+                                        </div>
+                                        <p class="mb-0">I appreciate the section on accessibility improvements. As a UX designer, I'm always looking for ways to make websites more inclusive, and AI tools have been game-changers in this area. Would love to see a follow-up article focusing specifically on AI and accessibility.</p>
+                                        <div class="comment-actions mt-2">
+                                            <button class="btn btn-sm text-primary p-0 me-3">
+                                                <i class="far fa-thumbs-up me-1"></i> Like
+                                            </button>
+                                            <button class="btn btn-sm text-primary p-0">
+                                                <i class="far fa-reply me-1"></i> Reply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 3 -->
+                            <div class="comment mb-4">
+                                <div class="d-flex">
+                                    <div class="comment-avatar">
+                                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Commenter" class="rounded-circle" width="50" height="50">
+                                    </div>
+                                    <div class="ms-3 flex-grow-1">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <h6 class="mb-0">Michael Taylor</h6>
+                                            <small class="text-muted ms-2">June 19, 2023</small>
+                                        </div>
+                                        <p class="mb-0">While I see the benefits of AI in web development, I'm concerned about the potential for over-reliance on these tools. There's still tremendous value in understanding the fundamentals and writing code from scratch. What are your thoughts on maintaining that balance?</p>
+                                        <div class="comment-actions mt-2">
+                                            <button class="btn btn-sm text-primary p-0 me-3">
+                                                <i class="far fa-thumbs-up me-1"></i> Like
+                                            </button>
+                                            <button class="btn btn-sm text-primary p-0">
+                                                <i class="far fa-reply me-1"></i> Reply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Comment Form -->
+                        <div class="comment-form-wrapper bg-light p-4 rounded-4 mt-5">
+                            <h4 class="mb-4">Leave a Comment</h4>
+                            <form id="commentForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="commentName" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="commentName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="commentEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="commentEmail" required>
+                                        <div class="form-text">Your email will not be published.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="commentMessage" class="form-label">Comment</label>
+                                        <textarea class="form-control" id="commentMessage" rows="4" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="saveInfo">
+                                            <label class="form-check-label" for="saveInfo">
+                                                Save my name and email for the next time I comment.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Post Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sidebar sticky-lg-top" style="top: 100px;">
+                        <!-- Author Widget -->
+                        <div class="sidebar-widget author-widget bg-light p-4 rounded-4 mb-4" data-aos="fade-left" data-aos-duration="800">
+                            <div class="text-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="rounded-circle img-fluid mb-3" style="max-width: 100px;">
+                                <h5 class="mb-1">Sarah Johnson</h5>
+                                <p class="text-primary mb-3">Senior Web Developer</p>
+                            </div>
+                            <p class="text-center mb-3">Tech enthusiast, coffee lover, and advocate for accessible web design.</p>
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">View All Posts</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget search-widget bg-light p-4 rounded-4 mb-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                            <h5 class="widget-title mb-3">Search</h5>
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search articles...">
+                                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Popular Posts Widget -->
+                        <div class="sidebar-widget popular-posts-widget bg-light p-4 rounded-4 mb-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                            <h5 class="widget-title mb-3">Popular Posts</h5>
+                            <div class="popular-posts">
+                                <!-- Popular Post 1 -->
+                                <div class="popular-post d-flex mb-3">
+                                    <div class="popular-post-img me-3">
+                                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular Post" class="rounded" width="70" height="70" style="object-fit: cover;">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h6 class="mb-1"><a href="#" class="text-dark">The Future of Web Development</a></h6>
+                                        <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> June 15, 2023</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Popular Post 2 -->
+                                <div class="popular-post d-flex mb-3">
+                                    <div class="popular-post-img me-3">
+                                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular Post" class="rounded" width="70" height="70" style="object-fit: cover;">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h6 class="mb-1"><a href="#" class="text-dark">Mastering Bootstrap 5</a></h6>
+                                        <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> June 10, 2023</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Popular Post 3 -->
+                                <div class="popular-post d-flex mb-3">
+                                    <div class="popular-post-img me-3">
+                                        <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular Post" class="rounded" width="70" height="70" style="object-fit: cover;">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h6 class="mb-1"><a href="#" class="text-dark">CSS Tips and Tricks</a></h6>
+                                        <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> June 5, 2023</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Popular Post 4 -->
+                                <div class="popular-post d-flex">
+                                    <div class="popular-post-img me-3">
+                                        <img src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular Post" class="rounded" width="70" height="70" style="object-fit: cover;">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h6 class="mb-1"><a href="#" class="text-dark">JavaScript Fundamentals</a></h6>
+                                        <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> May 28, 2023</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget categories-widget bg-light p-4 rounded-4 mb-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                            <h5 class="widget-title mb-3">Categories</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent border-0 px-0 py-2">
+                                    <a href="#" class="text-dark">Web Development</a>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent border-0 px-0 py-2">
+                                    <a href="#" class="text-dark">UI/UX Design</a>
+                                    <span class="badge bg-primary rounded-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent border-0 px-0 py-2">
+                                    <a href="#" class="text-dark">JavaScript</a>
+                                    <span class="badge bg-primary rounded-pill">11</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent border-0 px-0 py-2">
+                                    <a href="#" class="text-dark">CSS & HTML</a>
+                                    <span class="badge bg-primary rounded-pill">9</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent border-0 px-0 py-2">
+                                    <a href="#" class="text-dark">AI & Machine Learning</a>
+                                    <span class="badge bg-primary rounded-pill">6</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget tags-widget bg-light p-4 rounded-4 mb-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                            <h5 class="widget-title mb-3">Tags</h5>
+                            <div class="tags">
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">JavaScript</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">React</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">CSS</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">HTML5</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Bootstrap</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">UX Design</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Web Dev</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">AI</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Python</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Newsletter Widget -->
+                        <div class="sidebar-widget newsletter-widget bg-primary text-white p-4 rounded-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
+                            <h5 class="widget-title text-white mb-3">Newsletter</h5>
+                            <p>Subscribe to our newsletter to get the latest updates directly in your inbox.</p>
+                            <form class="newsletter-form mt-3">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email address" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-light">Subscribe Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts py-5 bg-light">
+        <div class="container">
+            <h3 class="mb-4">Related Articles</h3>
+            <div class="row g-4">
+                <!-- Related Post 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="card blog-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <span class="category-tag">AI</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta mb-2">
+                                <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> June 12, 2023</small>
+                                <small class="text-muted ms-3"><i class="far fa-clock me-1"></i> 6 min read</small>
+                            </div>
+                            <h5 class="card-title">Machine Learning for Frontend Developers</h5>
+                            <p class="card-text">How to integrate machine learning models into your frontend applications for enhanced user experiences.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <div class="d-flex align-items-center">
+                                <span class="me-3"><i class="far fa-eye me-1"></i> 723</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Post 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="card blog-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <span class="category-tag">Development</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta mb-2">
+                                <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> June 8, 2023</small>
+                                <small class="text-muted ms-3"><i class="far fa-clock me-1"></i> 5 min read</small>
+                            </div>
+                            <h5 class="card-title">Building Smart Forms with AI</h5>
+                            <p class="card-text">How to create intelligent forms that adapt to user input and provide better validation and suggestions.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <div class="d-flex align-items-center">
+                                <span class="me-3"><i class="far fa-eye me-1"></i> 589</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Post 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="card blog-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <span class="category-tag">Tools</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="post-meta mb-2">
+                                <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> June 3, 2023</small>
+                                <small class="text-muted ms-3"><i class="far fa-clock me-1"></i> 7 min read</small>
+                            </div>
+                            <h5 class="card-title">Top AI Tools for Web Developers</h5>
+                            <p class="card-text">A comprehensive review of the best AI-powered tools that can enhance your web development workflow.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <div class="d-flex align-items-center">
+                                <span class="me-3"><i class="far fa-eye me-1"></i> 842</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="widget-title mb-4"><span class="text-primary">Tech</span>Insight</h4>
+                        <p class="mb-4">A leading platform for tech enthusiasts, developers, and designers to discover the latest trends, tutorials, and insights in the world of technology.</p>
+                        <div class="footer-social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title mb-4">Quick Links</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title mb-4">Categories</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">UI/UX Design</a></li>
+                            <li><a href="#">Mobile Apps</a></li>
+                            <li><a href="#">AI & Machine Learning</a></li>
+                            <li><a href="#">Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title mb-4">Contact Info</h5>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, San Francisco, CA 94107</p>
+                            <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+                            <p><i class="fas fa-envelope me-2"></i> contact@techinsight.com</p>
+                        </div>
+                        <div class="mt-4">
+                            <h6 class="mb-3">Download Our App</h6>
+                            <div class="app-badges">
+                                <a href="#" class="me-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/320px-Google_Play_Store_badge_EN.svg.png" alt="Google Play" height="35"></a>
+                                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/320px-Download_on_the_App_Store_Badge.svg.png" alt="App Store" height="35"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5">
+            <div class="row py-3 align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 TechInsight. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><span class="text-muted mx-2">|</span></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><span class="text-muted mx-2">|</span></li>
+                        <li class="list-inline-item"><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Toast Container for Notifications -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- Subscribe Modal -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4 p-md-5">
+                    <i class="fas fa-envelope-open-text display-1 text-primary mb-4"></i>
+                    <h3 class="modal-title fw-bold" id="subscribeModalLabel">Subscribe to Our Newsletter</h3>
+                    <p class="mb-4">Get weekly updates, tech news, and exclusive content delivered to your inbox!</p>
+                    <form class="newsletter-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control mb-2" placeholder="Your Name">
+                            <input type="email" class="form-control" placeholder="Your Email Address">
+                        </div>
+                        <div class="mb-3 form-check text-start">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label small" for="exampleCheck1">I agree to receive emails from TechInsight</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Offcanvas -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="searchOffcanvas" aria-labelledby="searchOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="searchOffcanvasLabel">Search TechInsight</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <form>
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Search for articles, topics, or authors..." aria-label="Search">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div class="mt-4">
+                    <h6>Popular Searches:</h6>
+                    <div class="popular-searches mt-2">
+                        <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">JavaScript</a>
+                        <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">React</a>
+                        <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Bootstrap 5</a>
+                        <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">CSS Grid</a>
+                        <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">Web Design</a>
+                        <a href="#" class="badge bg-light text-dark me-2 mb-2 py-2 px-3">AI Tools</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -79,6 +79,13 @@
                     <button class="btn btn-outline-dark border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvas">
                         <i class="fas fa-search"></i>
                     </button>
+                    <!-- Dark Mode Toggle -->
+                    <div class="form-check form-switch ms-2 mt-2">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label" for="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,7 +132,7 @@
                         <h2 class="display-6 fw-bold mb-3">The Future of AI in Web Development</h2>
                         <p class="lead mb-4">Artificial Intelligence is revolutionizing how we build and interact with websites. Discover how AI tools are changing the landscape for developers and designers alike.</p>
                         <div class="d-flex align-items-center">
-                            <a href="#" class="btn btn-primary rounded-pill px-4">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+                            <a href="post.html" class="btn btn-primary rounded-pill px-4">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
                             <div class="ms-auto d-flex align-items-center">
                                 <span class="me-3"><i class="far fa-eye me-1"></i> 1.2K Views</span>
                                 <div class="d-flex">
@@ -164,7 +171,17 @@
                 <p class="lead text-muted">Discover the latest trends and insights in technology and development</p>
             </div>
             
-            <div class="row g-4">
+            <!-- Category Filter Buttons -->
+            <div class="category-pills text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+                <button class="btn btn-outline-primary rounded-pill me-2 mb-2 active">All Posts</button>
+                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">Web Development</button>
+                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">UI/UX Design</button>
+                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">JavaScript</button>
+                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">AI & Machine Learning</button>
+                <button class="btn btn-outline-primary rounded-pill me-2 mb-2">Mobile Apps</button>
+            </div>
+            
+            <div class="row g-4 blog-posts-container">
                 <!-- Blog Post 1 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="card blog-card h-100">
@@ -183,10 +200,10 @@
                             <p class="card-text">Explore the latest trends and technologies shaping the future of web development in 2023 and beyond.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
-                                <span class="me-3"><i class="far fa-eye me-1"></i> 845</span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle"><i class="far fa-heart"></i></button>
+                                <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">845</span></span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -198,7 +215,7 @@
                         <div class="card-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
                             <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <span class="category-tag">UI/UX</span>
+                                <span class="category-tag">UI/UX Design</span>
                             </div>
                         </div>
                         <div class="card-body">
@@ -210,10 +227,10 @@
                             <p class="card-text">Learn how to create responsive and beautiful websites using Bootstrap 5's powerful features and components.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
-                                <span class="me-3"><i class="far fa-eye me-1"></i> 1.1K</span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle"><i class="far fa-heart"></i></button>
+                                <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">1.1K</span></span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -225,7 +242,7 @@
                         <div class="card-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
                             <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <span class="category-tag">CSS</span>
+                                <span class="category-tag">Web Development</span>
                             </div>
                         </div>
                         <div class="card-body">
@@ -237,10 +254,10 @@
                             <p class="card-text">Discover advanced CSS techniques that will help you create stunning visual effects and layouts for your websites.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
-                                <span class="me-3"><i class="far fa-eye me-1"></i> 732</span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle"><i class="far fa-heart"></i></button>
+                                <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">732</span></span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -264,10 +281,10 @@
                             <p class="card-text">A comprehensive guide to JavaScript basics that every web developer should know to build interactive websites.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
-                                <span class="me-3"><i class="far fa-eye me-1"></i> 956</span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle"><i class="far fa-heart"></i></button>
+                                <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">956</span></span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -279,7 +296,7 @@
                         <div class="card-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
                             <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <span class="category-tag">Responsive</span>
+                                <span class="category-tag">UI/UX Design</span>
                             </div>
                         </div>
                         <div class="card-body">
@@ -291,10 +308,10 @@
                             <p class="card-text">Learn the key principles of responsive web design to ensure your websites look great on all devices and screen sizes.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
-                                <span class="me-3"><i class="far fa-eye me-1"></i> 678</span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle"><i class="far fa-heart"></i></button>
+                                <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">678</span></span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -306,7 +323,7 @@
                         <div class="card-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog Post Image">
                             <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <span class="category-tag">Accessibility</span>
+                                <span class="category-tag">Web Development</span>
                             </div>
                         </div>
                         <div class="card-body">
@@ -318,10 +335,10 @@
                             <p class="card-text">A guide to making your websites accessible to everyone, including people with disabilities and those using assistive technologies.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
-                            <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="post.html" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                             <div class="d-flex align-items-center">
-                                <span class="me-3"><i class="far fa-eye me-1"></i> 542</span>
-                                <button class="btn btn-sm btn-outline-primary rounded-circle"><i class="far fa-heart"></i></button>
+                                <span class="me-3"><i class="far fa-eye me-1"></i> <span class="like-count">542</span></span>
+                                <button class="btn btn-sm btn-outline-primary rounded-circle like-btn" data-bs-toggle="tooltip" title="Like this post"><i class="far fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -330,7 +347,7 @@
             
             <!-- Load More Button -->
             <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="800">
-                <button class="btn btn-outline-primary rounded-pill px-4">
+                <button class="btn btn-outline-primary rounded-pill px-4 load-more-btn">
                     <i class="fas fa-sync-alt me-2"></i>Load More Articles
                 </button>
             </div>
@@ -601,6 +618,9 @@
     <a href="#" class="back-to-top" aria-label="Back to Top">
         <i class="fas fa-arrow-up"></i>
     </a>
+    
+    <!-- Toast Container for Notifications -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
 
     <!-- Subscribe Modal -->
     <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
@@ -663,29 +683,6 @@
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
-    <script>
-        // Initialize AOS
-        AOS.init();
-        
-        // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-        
-        // Back to top button
-        const backToTopButton = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
